@@ -1,0 +1,417 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>La Casita Napoleon | Full Menu</title>
+    <link href="logo-la-casita.png" rel="icon" type="image/png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&family=Manrope:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#131313",
+              surface: "#131313",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-lowest": "#0e0e0e",
+              "on-surface": "#e5e2e1",
+              "on-surface-variant": "#e1bfb5",
+              primary: "#ffb59c",
+              "primary-container": "#c1440e",
+              "on-primary-container": "#ffeee9",
+              secondary: "#f6be39",
+              accent: "#90b84a",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .primary-glow-btn {
+        background: linear-gradient(135deg, #ffb59c 0%, #c1440e 100%);
+      }
+      .menu-item {
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        padding-top: 1rem;
+      }
+      .menu-item:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+      .menu-title-row {
+        align-items: baseline;
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+      }
+      .menu-title {
+        color: #e5e2e1;
+        font-size: 1.15rem;
+        line-height: 1.4;
+      }
+      .menu-price {
+        color: #ffb59c;
+        flex-shrink: 0;
+        font-weight: 700;
+        text-align: right;
+      }
+      .menu-meta {
+        color: #e1bfb5;
+        display: grid;
+        gap: 0.35rem;
+        margin-top: 0.55rem;
+      }
+      .menu-meta-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 0.65rem;
+        justify-content: space-between;
+      }
+      .menu-meta-label {
+        color: #bfb1ab;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-surface font-body">
+    <main class="min-h-screen">
+      <section class="px-8 py-10 bg-surface-container-lowest">
+        <div
+          class="max-w-7xl mx-auto flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
+        >
+          <div>
+            <a
+              class="inline-flex items-center gap-3 text-sm uppercase tracking-[0.3em] text-secondary"
+              href="code.html"
+              ><img
+                alt="La Casita logo"
+                class="h-10 w-10 rounded-full object-cover"
+                src="logo-la-casita.png"
+              />Back to Home</a
+            >
+            <h1 class="font-headline text-5xl md:text-7xl mt-4">Full Menu</h1>
+            <p class="text-on-surface-variant text-lg mt-4 max-w-3xl">
+              A clean text version of the current La Casita menu with products
+              and prices from the two menu sheets.
+            </p>
+          </div>
+          <a
+            class="primary-glow-btn text-on-primary-container px-8 py-4 rounded-md font-label font-bold uppercase tracking-[0.2em] text-center"
+            href="order.html"
+            >Order Now</a
+          >
+        </div>
+      </section>
+
+      <section class="px-8 py-16">
+        <div class="max-w-7xl mx-auto grid gap-8 lg:grid-cols-2">
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-4">
+              Appetizers
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>Famous Casita Dip</span><span class="text-primary">$9.99</span></div>
+              <div class="flex justify-between gap-6"><span>Pepper Jack Cheese Balls</span><span class="text-primary">$6.99</span></div>
+              <div class="flex justify-between gap-6"><span>Chicken Strips</span><span class="text-primary">Fries $8.99 / Waffle Fries $8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Guacamole Cup</span><span class="text-primary">$4.50</span></div>
+              <div class="flex justify-between gap-6"><span>Casita Cheese Dip Cup</span><span class="text-primary">$5.99</span></div>
+              <div class="flex justify-between gap-6"><span>Nacho Cheese Cup</span><span class="text-primary">$3.50</span></div>
+              <div class="flex justify-between gap-6"><span>Pico de Gallo</span><span class="text-primary">$2.50</span></div>
+              <div class="flex justify-between gap-6"><span>Chicken Wings</span><span class="text-primary">6 pc $7.99 / 10 pc $11.99 / 14 pc $15.99</span></div>
+              <div class="flex justify-between gap-6"><span>Chicken Tortilla Soup</span><span class="text-primary">Cup $4.50 / Bowl $6.99</span></div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-accent uppercase tracking-[0.3em] text-sm mb-4">
+              Tacos
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>Street Style Tacos</span><span class="text-primary">$4.50 each</span></div>
+              <div class="flex justify-between gap-6"><span>Add-ons: Pico de Gallo, Sour Cream, Salsa, Cheese</span><span class="text-primary">$0.99 each</span></div>
+              <div class="flex justify-between gap-6"><span>Tacos Dinner</span><span class="text-primary">1 for $3.50 / 3 for $7.59</span></div>
+              <div class="flex justify-between gap-6"><span>Street style meat choices</span><span class="text-primary">Steak, Grilled Chicken, Chorizo, Campechano</span></div>
+              <div class="flex justify-between gap-6"><span>Taco shell choices</span><span class="text-primary">Hard, Soft, Flour, Crunchy Beef</span></div>
+              <div class="flex justify-between gap-6"><span>Street style meat option on tacos dinner</span><span class="text-primary">+$0.99</span></div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-4">
+              BYO Burrito or Bowl
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>Ground Beef</span><span class="text-primary">$13.99</span></div>
+              <div class="flex justify-between gap-6"><span>Shredded Chicken</span><span class="text-primary">$14.99</span></div>
+              <div class="flex justify-between gap-6"><span>Steak</span><span class="text-primary">$15.99</span></div>
+              <div class="flex justify-between gap-6"><span>Grilled Chicken</span><span class="text-primary">$14.99</span></div>
+              <div class="flex justify-between gap-6"><span>Grilled Shrimp</span><span class="text-primary">$16.99</span></div>
+              <div class="flex justify-between gap-6"><span>Deluxe add-ons: Fresh Jalapenos, Pickled Jalapenos, Grilled Jalapenos, Grilled Onions</span><span class="text-primary">$0.99 each</span></div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-accent uppercase tracking-[0.3em] text-sm mb-4">
+              A La Carte
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>French Fries</span><span class="text-primary">$5.99</span></div>
+              <div class="flex justify-between gap-6"><span>Waffle Fries</span><span class="text-primary">$5.99</span></div>
+              <div class="flex justify-between gap-6"><span>Rice</span><span class="text-primary">$3.99</span></div>
+              <div class="flex justify-between gap-6"><span>Beans</span><span class="text-primary">$3.99</span></div>
+              <div class="flex justify-between gap-6"><span>Corn Tortillas</span><span class="text-primary">3 for $1.25</span></div>
+              <div class="flex justify-between gap-6"><span>Flour Tortillas</span><span class="text-primary">3 for $1.50</span></div>
+              <div class="flex justify-between gap-6"><span>Chile Toreados</span><span class="text-primary">$1.75</span></div>
+              <div class="flex justify-between gap-6"><span>Burrito</span><span class="text-primary">From $6.99</span></div>
+              <div class="flex justify-between gap-6"><span>Enchiladas</span><span class="text-primary">1 for $3.99 / 2 for $7.99 / 3 for $11.99</span></div>
+              <div class="flex justify-between gap-6"><span>Cheese Quesadilla</span><span class="text-primary">Small $2.25 / Large $4.99</span></div>
+              <div class="flex justify-between gap-6"><span>Add meat to quesadilla</span><span class="text-primary">$1.99</span></div>
+              <div class="flex justify-between gap-6"><span>Chips & Salsa</span><span class="text-primary">Small $2.50 / Large $9.99</span></div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-4">
+              La Casita Specialties
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>Carne Asada</span><span class="text-primary">$19.99</span></div>
+              <div class="flex justify-between gap-6"><span>Loaded Nachos</span><span class="text-primary">Small $11.99 / Large $12.99</span></div>
+              <div class="flex justify-between gap-6"><span>Huaraches</span><span class="text-primary">Beef $6.29 / Chicken, Steak or Ground Beef $7.29</span></div>
+              <div class="flex justify-between gap-6"><span>Hot Dogs Plain</span><span class="text-primary">$3.99</span></div>
+              <div class="flex justify-between gap-6"><span>Hot Dog with Fries</span><span class="text-primary">$5.99</span></div>
+              <div class="flex justify-between gap-6"><span>Hot Dog only</span><span class="text-primary">$3.99</span></div>
+              <div class="flex justify-between gap-6"><span>Chorri Avocado</span><span class="text-primary">$9.99 each</span></div>
+              <div class="flex justify-between gap-6"><span>La Familiar</span><span class="text-primary">$39.99 each</span></div>
+              <div class="flex justify-between gap-6"><span>Camarones a la Diabla</span><span class="text-primary">$19.99</span></div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-accent uppercase tracking-[0.3em] text-sm mb-4">
+              Lunch Specials
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>Two American Tacos with Rice & Beans</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Two Enchiladas with Rice & Beans</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Two Small Burritos with Rice & Beans</span><span class="text-primary">$9.99</span></div>
+              <div class="flex justify-between gap-6"><span>Cheese Quesadilla with Rice</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Small Taco Salad</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Two Enchiladas with Rice</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Lunch Size Fajitas with Rice & Beans</span><span class="text-primary">$10.99</span></div>
+              <div class="flex justify-between gap-6"><span>Two Mexican Tacos with Rice & Beans</span><span class="text-primary">$10.99</span></div>
+              <div class="flex justify-between gap-6"><span>Mini Chimi with Rice & Beans</span><span class="text-primary">$9.99</span></div>
+              <div class="flex justify-between gap-6"><span>Lunch Size Meat Lover Fajitas</span><span class="text-primary">$12.99</span></div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-4">
+              Salads
+            </p>
+            <div class="space-y-5 text-on-surface-variant">
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Fajita Salad</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Grilled Chicken</span>
+                    <span class="menu-price">$15.99</span>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Tropical Salad</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Grilled Chicken</span>
+                    <span class="menu-price">$14.99</span>
+                  </div>
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Steak</span>
+                    <span class="menu-price">$15.99</span>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Taco Salad</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Ground Beef or Shredded Chicken</span>
+                    <span class="menu-price">$13.99</span>
+                  </div>
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Grilled Chicken</span>
+                    <span class="menu-price">$14.99</span>
+                  </div>
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Steak</span>
+                    <span class="menu-price">$15.99</span>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">La Casita Salad</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Chicken</span>
+                    <span class="menu-price">$14.99</span>
+                  </div>
+                  <div class="menu-meta-line">
+                    <span class="menu-meta-label">Steak</span>
+                    <span class="menu-price">$16.99</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-accent uppercase tracking-[0.3em] text-sm mb-4">
+              Dinners
+            </p>
+            <div class="space-y-5 text-on-surface-variant">
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Drenched Enchiladas</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Chicken</span><span class="menu-price">$13.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$14.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Ground Beef</span><span class="menu-price">$14.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Enchiladas Rojas</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Chicken</span><span class="menu-price">$13.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Ground Beef</span><span class="menu-price">$14.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$14.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Enchiladas Verdes</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Shredded Chicken</span><span class="menu-price">$13.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$14.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Ground Beef</span><span class="menu-price">$14.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Fajita Wrap</span>
+                  <span class="menu-price">$15.99</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Fajitas Tradicionales GF</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Chicken</span><span class="menu-price">$15.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$17.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Shrimp</span><span class="menu-price">$19.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Mixed</span><span class="menu-price">$20.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">TexMex Quesadilla</span>
+                  <span class="menu-price">$14.99</span>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Quesadilla Simple</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Chicken</span><span class="menu-price">$13.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$14.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Chimichanga</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Ground Beef</span><span class="menu-price">$16.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$16.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Grilled Chicken</span><span class="menu-price">$16.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Fajita Style</span><span class="menu-price">$2.00</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Tacos Doble Fondo</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Grilled Chicken</span><span class="menu-price">$13.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$15.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Tacos Supremos GF</span>
+                </div>
+                <div class="menu-meta">
+                  <div class="menu-meta-line"><span class="menu-meta-label">Ground Beef</span><span class="menu-price">$12.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Grilled Chicken</span><span class="menu-price">$13.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Steak</span><span class="menu-price">$15.99</span></div>
+                  <div class="menu-meta-line"><span class="menu-meta-label">Campechanos</span><span class="menu-price">$14.99</span></div>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-title-row">
+                  <span class="menu-title">Meat Lover Fajita</span>
+                  <span class="menu-price">$23.99</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-2xl bg-surface-container-low p-8">
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-4">
+              Kids, Desserts & Drinks
+            </p>
+            <div class="space-y-4 text-on-surface-variant">
+              <div class="flex justify-between gap-6"><span>Fried Chicken Strips</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Hot Dog & Fries</span><span class="text-primary">$8.99</span></div>
+              <div class="flex justify-between gap-6"><span>Taco</span><span class="text-primary">$5.00</span></div>
+              <div class="flex justify-between gap-6"><span>Burrito</span><span class="text-primary">+$0.50</span></div>
+              <div class="flex justify-between gap-6"><span>Quesadilla</span><span class="text-primary">Price shown on menu</span></div>
+              <div class="flex justify-between gap-6"><span>Fried Ice Cream</span><span class="text-primary">$7.99</span></div>
+              <div class="flex justify-between gap-6"><span>Mini Cheesecake</span><span class="text-primary">$7.99</span></div>
+              <div class="flex justify-between gap-6"><span>Churros</span><span class="text-primary">$7.99</span></div>
+              <div class="flex justify-between gap-6"><span>Rainbow Fried Ice Cream</span><span class="text-primary">$7.99</span></div>
+              <div class="flex justify-between gap-6"><span>Fountain Drinks</span><span class="text-primary">$2.99</span></div>
+              <div class="flex justify-between gap-6"><span>Coffee</span><span class="text-primary">$2.50</span></div>
+              <div class="flex justify-between gap-6"><span>Jarritos</span><span class="text-primary">$3.99</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

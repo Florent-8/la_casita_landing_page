@@ -1,0 +1,709 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>La Casita Napoleon | Authentic Mexican Cuisine</title>
+    <link href="logo-la-casita.png" rel="icon" type="image/png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&family=Manrope:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#32302c",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-container-high": "#2a2a2a",
+              "on-background": "#e5e2e1",
+              "tertiary-fixed-dim": "#cac6bf",
+              "tertiary-fixed": "#e7e2db",
+              "on-secondary-fixed-variant": "#5c4300",
+              "on-error": "#690005",
+              "surface-variant": "#353535",
+              background: "#131313",
+              "primary-container": "#c1440e",
+              "inverse-on-surface": "#313030",
+              "outline-variant": "#59413a",
+              "surface-container": "#20201f",
+              "on-surface-variant": "#e1bfb5",
+              "on-primary-container": "#ffeee9",
+              "secondary-fixed-dim": "#f6be39",
+              "on-error-container": "#ffdad6",
+              primary: "#ffb59c",
+              "secondary-fixed": "#ffdfa0",
+              "on-secondary-fixed": "#261a00",
+              "primary-fixed-dim": "#ffb59c",
+              "surface-bright": "#393939",
+              "surface-dim": "#131313",
+              "on-primary": "#5c1900",
+              "secondary-container": "#c59300",
+              "surface-container-highest": "#353535",
+              "error-container": "#93000a",
+              "primary-fixed": "#ffdbcf",
+              "surface-container-low": "#1c1b1b",
+              "on-secondary": "#402d00",
+              "on-primary-fixed": "#390c00",
+              "inverse-surface": "#e5e2e1",
+              outline: "#a88a81",
+              tertiary: "#cac6bf",
+              "surface-tint": "#ffb59c",
+              "on-tertiary-container": "#f6f1ea",
+              "tertiary-container": "#716e68",
+              "on-tertiary-fixed-variant": "#494742",
+              "on-primary-fixed-variant": "#822800",
+              secondary: "#f6be39",
+              "on-secondary-container": "#433000",
+              "inverse-primary": "#aa3600",
+              "on-surface": "#e5e2e1",
+              error: "#ffb4ab",
+              "on-tertiary-fixed": "#1d1c17",
+              surface: "#131313",
+            },
+            borderRadius: {
+              DEFAULT: "0.125rem",
+              lg: "0.25rem",
+              xl: "0.5rem",
+              full: "0.75rem",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          to bottom,
+          rgba(19, 19, 19, 0.4) 0%,
+          rgba(19, 19, 19, 0.9) 100%
+        );
+      }
+      .primary-glow-btn {
+        background: linear-gradient(135deg, #ffb59c 0%, #c1440e 100%);
+      }
+      .nav-link {
+        border-bottom: 2px solid transparent;
+        color: rgb(163 163 163);
+        padding-bottom: 0.25rem;
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: rgb(245 245 245);
+      }
+      .nav-link-active {
+        border-bottom-color: rgb(234 88 12);
+        color: rgb(249 115 22);
+      }
+      .story-modal-backdrop {
+        background: rgba(0, 0, 0, 0.72);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <nav class="fixed top-0 w-full z-50 bg-neutral-900/60 backdrop-blur-md">
+      <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div class="font-serif text-2xl font-bold italic text-neutral-100">
+          <a class="flex items-center gap-3" href="#home">
+            <img
+              alt="La Casita logo"
+              class="h-12 w-12 rounded-full object-cover"
+              src="logo-la-casita.png"
+            />
+            <span>La Casita Napoleon</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="nav-link nav-link-active font-serif tracking-tight text-lg"
+            href="#home"
+            data-nav-link
+            >Home</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg"
+            href="#story"
+            data-nav-link
+            >Our Story</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg"
+            href="#menu"
+            data-nav-link
+            >Menu</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg"
+            href="#location"
+            data-nav-link
+            >Location</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg"
+            href="#contact"
+            data-nav-link
+            >Contact</a
+          >
+        </div>
+        <div class="flex items-center gap-4">
+          <a
+            class="hidden sm:inline-flex bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label text-sm uppercase tracking-widest font-bold hover:brightness-110 transition-all"
+            href="order.html"
+            >Order Now</a
+          >
+          <button
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+            class="md:hidden inline-flex items-center justify-center rounded-lg border border-white/10 bg-white/5 p-2 text-on-surface"
+            id="mobile-menu-button"
+            type="button"
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+      <div
+        class="hidden border-t border-white/10 bg-neutral-950/95 px-8 py-6 md:hidden"
+        id="mobile-menu"
+      >
+        <div class="flex flex-col gap-5">
+          <a class="nav-link nav-link-active font-serif tracking-tight text-lg w-fit" data-nav-link href="#home">Home</a>
+          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#story">Our Story</a>
+          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#menu">Menu Highlights</a>
+          <a class="nav-link font-serif tracking-tight text-lg w-fit" href="menu.html">Menu</a>
+          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#location">Location</a>
+          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#contact">Contact</a>
+          <a
+            class="inline-flex w-fit bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label text-sm uppercase tracking-widest font-bold hover:brightness-110 transition-all"
+            href="order.html"
+            >Order Now</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="relative min-h-screen flex items-center pt-20 overflow-hidden"
+      id="home"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          data-alt="dramatic close-up of sizzling carne asada meat on a hot iron grill with warm amber lighting and rising steam"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPCWWJ5pzW-vDRTjWQDKGdgL-mIJ0Qv62yrAZIlOSGyh69wQvHPh0WXDrBXx55NVLK_qwRHwv4RxU2Yw1yDjhqhHKQ9I9ACcB8YnuopWCKNSrnej4pL4E6nyQ4h7TtagCtXGdOM6kNbwGFBEdKKBoaU7BGu9uwyV5A1rp5fJr3EhsQsnrMHmle9CS3C5vEKsImKbHigKcXOOVajXptv0AaTlg1w_BwlpkTzoSxIu89TPZ7uW4lFvwduxFSjmnXToASu6O-kMhn0qEM"
+        />
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+        <div class="max-w-2xl">
+          <span
+            class="inline-block text-secondary font-label text-sm uppercase tracking-[0.3em] mb-6"
+            >Established 2026</span
+          >
+          <h1
+            class="font-headline text-6xl md:text-8xl font-extrabold text-on-surface leading-tight mb-6"
+          >
+            Authentic Mexican.<br /><span class="text-primary italic"
+              >Family Made.</span
+            >
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-on-surface-variant font-light mb-10 leading-relaxed"
+          >
+            Napoleon's home for real Mexican cooking since 2026. Experience
+            recipes passed down through generations.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-6">
+            <a
+              class="primary-glow-btn text-on-primary-container px-10 py-4 rounded-md font-label font-bold uppercase tracking-widest text-lg shadow-2xl hover:scale-105 transition-transform"
+              href="menu.html"
+              >Explore the Menu</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-on-surface py-12 px-8">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-inverse-on-surface"
+      >
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary-container"
+            >house</span
+          >
+          <span class="font-label text-xs font-bold uppercase tracking-wider"
+            >Family-Owned</span
+          >
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary-container"
+            >restaurant_menu</span
+          >
+          <span class="font-label text-xs font-bold uppercase tracking-wider"
+            >Authentic Recipes</span
+          >
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary-container"
+            >schedule</span
+          >
+          <span class="font-label text-xs font-bold uppercase tracking-wider"
+            >Daily 11AM-8PM</span
+          >
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-secondary-container"
+            >location_on</span
+          >
+          <span class="font-label text-xs font-bold uppercase tracking-wider"
+            >Napoleon, Michigan</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 md:py-16 px-8 bg-surface" id="story">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.95fr] gap-12 items-center">
+        <div class="relative">
+          <div class="w-14 h-1 bg-secondary mb-7"></div>
+          <h2
+            class="font-headline text-3xl md:text-5xl text-on-surface mb-6 leading-tight"
+          >
+            A Legacy of<br />Flavor.
+          </h2>
+          <div
+            class="space-y-4 text-on-surface-variant text-base md:text-lg leading-relaxed"
+          >
+            <p>
+              After 23 years behind the stove, Antolin Gamez and his family
+              brought their recipes home to Napoleon.
+            </p>
+            <p>
+              Every dish at La Casita starts with the same thing: love for real
+              Mexican food. We do not believe in shortcuts, only the slow-cooked
+              traditions that define our heritage.
+            </p>
+            <p>
+              What began as years of experience in the kitchen became a place
+              where family recipes, everyday hospitality, and bold regional
+              flavors could finally have a home of their own.
+            </p>
+          </div>
+          <div
+            class="mt-7 flex flex-col sm:flex-row sm:items-center gap-4"
+          >
+            <span class="text-secondary font-headline italic text-xl">The Gamez Family</span>
+            <button
+              class="inline-flex w-fit items-center justify-center rounded-md border border-white/10 px-5 py-3 font-label text-sm font-bold uppercase tracking-[0.2em] text-on-surface hover:border-primary hover:text-primary transition-all"
+              id="open-story-modal"
+              type="button"
+            >
+              Read Full Story
+            </button>
+          </div>
+        </div>
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-outline-variant/10 rounded-xl transition-transform group-hover:scale-105"
+          ></div>
+          <img
+            class="relative w-full max-w-[420px] mx-auto aspect-[4/3] object-cover rounded-md shadow-2xl"
+            data-alt="moody close-up of artisanal tacos with handmade tortillas, fresh cilantro, and lime on a dark stone plate with low key lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBu2NLPc0fTwlYQSIYkDpJXl2iFfqEYFQdPjo4AYgMt9xiOy6yf-B_ro1lG_SWEQX0YTlCUN9qdpgjCwKZH7Tmk6edf7RgLo1cHCC0V3O7X2Ymv3OqRTe8-qgGeWI3UR4tLFqgFm_D7KFPhV_7uDrK9ajSiGs-Yqb3AJVvGvXVH_EolEwaphNRyDa_oLZ0_jFJ_pC8K0LmpbLZ1a3cS1gj6r4uedZVdZAFJXLbxEK1WgyfCSXg1WBojnsn5qqD7AZb6808yfZOWVQM"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="story-modal-backdrop fixed inset-0 z-[60] hidden items-center justify-center px-6"
+      id="story-modal"
+    >
+      <div
+        class="relative max-h-[85vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-surface-container-high p-8 md:p-10 shadow-2xl"
+      >
+        <button
+          aria-label="Close full story"
+          class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-on-surface hover:border-primary hover:text-primary transition-colors"
+          id="close-story-modal"
+          type="button"
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+        <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-4">
+          Full Story
+        </p>
+        <h3 class="font-headline text-4xl md:text-5xl text-on-surface mb-6">
+          From The Family Table To La Casita
+        </h3>
+        <div class="space-y-5 text-on-surface-variant text-base md:text-lg leading-relaxed">
+          <p>
+            For more than two decades, Antolin Gamez built his life around the
+            kitchen, learning what it takes to make honest food that people
+            remember. Over those 23 years, the family recipes stayed close,
+            shaped by tradition, patience, and the kind of cooking that asks
+            you to slow down and do it right.
+          </p>
+          <p>
+            La Casita was born from the idea that Napoleon deserved a place
+            where Mexican food felt real, generous, and deeply personal. Not a
+            rushed version. Not a shortcut. A place where grilled meats, sauces,
+            rice, beans, tortillas, and salsas are treated with care because
+            they carry the flavor of home.
+          </p>
+          <p>
+            The restaurant reflects the values behind the recipes: family,
+            consistency, and welcome. Every plate is meant to feel like it came
+            from a kitchen that respects where it came from and who it is being
+            served to.
+          </p>
+          <p>
+            Today, La Casita is more than a restaurant name. It is the Gamez
+            family bringing their heritage to the table and inviting the
+            community to be part of it, one meal at a time.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-24 px-8 bg-surface-container-low" id="menu">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <span
+            class="font-label text-secondary uppercase tracking-[0.4em] text-sm"
+            >Culinaria</span
+          >
+          <h2 class="font-headline text-5xl text-on-surface mt-4">
+            Menu Highlights
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-10">
+          <div
+            class="bg-surface-container-high p-10 rounded-lg border-t-4 border-primary-container group hover:bg-surface-variant transition-colors"
+          >
+            <div class="mb-8 overflow-hidden rounded-lg">
+              <img
+                alt="Carne asada plate with rice, grilled onions, jalapenos, guacamole, and pico de gallo"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="carne.png"
+              />
+            </div>
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-3">
+              Featured Item
+            </p>
+            <h3 class="font-headline text-2xl text-secondary-fixed-dim mb-2">
+              Carne Asada
+            </h3>
+            <p class="text-primary font-bold text-xl mb-4">$21.99</p>
+            <p class="text-on-surface-variant leading-relaxed">
+              Marinated steak topped with grilled onions and served with
+              Mexican rice, guacamole, pico de gallo, and your choice of
+              tortillas.
+            </p>
+          </div>
+          <div
+            class="bg-surface-container-high p-10 rounded-lg border-t-4 border-primary-container group hover:bg-surface-variant transition-colors"
+          >
+            <div class="mb-8 overflow-hidden rounded-lg">
+              <img
+                alt="Enchiladas rojas plate with rice, beans, shredded cheese, and pico de gallo"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="rojas.png"
+              />
+            </div>
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-3">
+              Featured Item
+            </p>
+            <h3 class="font-headline text-2xl text-secondary-fixed-dim mb-2">
+              Enchiladas Rojas
+            </h3>
+            <p class="text-primary font-bold text-xl mb-4">$14.29</p>
+            <p class="text-on-surface-variant leading-relaxed">
+              Four corn tortillas dipped in red sauce, filled with mozzarella
+              cheese, and served with your choice of meat.
+            </p>
+          </div>
+          <div
+            class="bg-surface-container-high p-10 rounded-lg border-t-4 border-primary-container group hover:bg-surface-variant transition-colors"
+          >
+            <div class="mb-8 overflow-hidden rounded-lg">
+              <img
+                alt="Street style taco topped with cilantro and onion with a lime wedge on the side"
+                class="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                src="street_taco.png"
+              />
+            </div>
+            <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-3">
+              Featured Item
+            </p>
+            <h3 class="font-headline text-2xl text-secondary-fixed-dim mb-2">
+              Street Style Tacos
+            </h3>
+            <p class="text-primary font-bold text-xl mb-4">$4.95</p>
+            <p class="text-on-surface-variant leading-relaxed">
+              Built with onion and cilantro and available with steak, grilled
+              chicken, chorizo, or campechano.
+            </p>
+          </div>
+        </div>
+        <div class="mt-14 text-center">
+          <a
+            class="inline-flex items-center justify-center bg-primary-container text-on-primary-container px-12 py-5 rounded-md font-label font-extrabold uppercase tracking-[0.2em] hover:brightness-125 transition-all"
+            href="menu.html"
+            >See Full Menu</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-surface-container-lowest py-20 px-8">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10"
+      >
+        <div class="text-center md:text-left">
+          <h3 class="font-headline text-3xl text-on-surface mb-4">
+            Taste the Tradition
+          </h3>
+          <p class="text-on-surface-variant text-lg">
+            From lunch specials to family platters, there is something for
+            everyone.
+          </p>
+        </div>
+        <a
+          class="bg-primary-container text-on-primary-container px-12 py-5 rounded-md font-label font-extrabold uppercase tracking-[0.2em] hover:brightness-125 transition-all"
+          href="menu.html"
+          >View Full Menu</a
+        >
+      </div>
+    </section>
+
+    <section
+      class="h-[400px] w-full relative grayscale contrast-125 hover:grayscale-0 transition-all duration-700"
+      id="location"
+    >
+      <iframe
+        allowfullscreen=""
+        class="w-full h-full border-0 opacity-85"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d757042.3434358028!2d-85.47874992187498!3d42.16747489999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cdf72ea030663%3A0x48409e4308a0ec23!2sLa%20Casita%20Napoleon!5e0!3m2!1sen!2s!4v1775252285912!5m2!1sen!2s"
+        title="La Casita Napoleon Location"
+      ></iframe>
+    </section>
+
+    <footer class="bg-neutral-950 w-full py-16 px-8" id="contact">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start max-w-7xl mx-auto"
+      >
+        <div>
+          <a class="inline-flex items-center gap-4 mb-6" href="#home">
+            <img
+              alt="La Casita logo"
+              class="h-16 w-16 rounded-full object-cover"
+              src="logo-la-casita.png"
+            />
+            <span class="flex flex-col">
+              <span class="font-headline text-2xl text-neutral-100 italic">La Casita Napoleon</span>
+              <span class="font-label text-xs uppercase tracking-[0.3em] text-neutral-500">Mexican Grill</span>
+            </span>
+          </a>
+          <p
+            class="font-sans text-sm uppercase tracking-widest text-neutral-500 leading-relaxed"
+          >
+            Bringing authentic Mexican heritage to the heart of Michigan.
+            Crafted with passion, served with pride.
+          </p>
+          <p class="font-sans text-sm text-neutral-400 mt-6">
+            Call us for reservations and group dining arrangements.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <h4
+            class="font-sans text-sm uppercase tracking-widest text-orange-600 mb-6"
+          >
+            Information
+          </h4>
+          <div
+            class="flex flex-col gap-3 font-sans text-sm uppercase tracking-widest text-neutral-500"
+          >
+            <a class="hover:text-amber-400 transition-colors" href="#location"
+              >6780 Brooklyn Road, Napoleon, MI</a
+            >
+            <span>Daily 11AM-8PM</span>
+            <a
+              class="hover:text-amber-400 transition-colors"
+              href="tel:+15170000000"
+              >Call Us</a
+            >
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h4
+            class="font-sans text-sm uppercase tracking-widest text-orange-600 mb-6"
+          >
+            Legal
+          </h4>
+          <div
+            class="flex flex-col gap-3 font-sans text-sm uppercase tracking-widest text-neutral-500"
+          >
+            <span>&copy; 2026 La Casita Napoleon</span>
+            <a class="hover:text-amber-400 transition-colors" href="privacy.html"
+              >Privacy Policy</a
+            >
+            <div class="flex gap-4 mt-4 text-sm uppercase tracking-[0.2em]">
+              <a
+                class="text-neutral-400 hover:text-amber-400 transition-colors"
+                href="https://www.instagram.com/"
+                >Instagram</a
+              >
+              <a
+                class="text-neutral-400 hover:text-amber-400 transition-colors"
+                href="https://www.facebook.com/"
+                >Facebook</a
+              >
+              <a
+                class="text-neutral-400 hover:text-amber-400 transition-colors"
+                href="https://www.tiktok.com/"
+                >TikTok</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const openStoryModalButton = document.getElementById("open-story-modal");
+      const closeStoryModalButton = document.getElementById("close-story-modal");
+      const storyModal = document.getElementById("story-modal");
+      const navLinks = Array.from(document.querySelectorAll("[data-nav-link]"));
+      const mobileMenuLinks = Array.from(mobileMenu.querySelectorAll("a"));
+      const sectionIds = ["home", "story", "menu", "location", "contact"];
+      const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+
+      const setActiveLink = (activeId) => {
+        navLinks.forEach((link) => {
+          const targetId = link.getAttribute("href")?.replace("#", "");
+          link.classList.toggle("nav-link-active", targetId === activeId);
+        });
+      };
+
+      const closeMobileMenu = () => {
+        mobileMenu.classList.add("hidden");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+        mobileMenuButton.innerHTML =
+          '<span class="material-symbols-outlined">menu</span>';
+      };
+
+      const openStoryModal = () => {
+        storyModal.classList.remove("hidden");
+        storyModal.classList.add("flex");
+        document.body.classList.add("overflow-hidden");
+      };
+
+      const closeStoryModal = () => {
+        storyModal.classList.add("hidden");
+        storyModal.classList.remove("flex");
+        document.body.classList.remove("overflow-hidden");
+      };
+
+      mobileMenuButton.addEventListener("click", () => {
+        const isOpen = !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
+        mobileMenuButton.innerHTML = isOpen
+          ? '<span class="material-symbols-outlined">menu</span>'
+          : '<span class="material-symbols-outlined">close</span>';
+      });
+
+      openStoryModalButton.addEventListener("click", openStoryModal);
+      closeStoryModalButton.addEventListener("click", closeStoryModal);
+      storyModal.addEventListener("click", (event) => {
+        if (event.target === storyModal) {
+          closeStoryModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !storyModal.classList.contains("hidden")) {
+          closeStoryModal();
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          setActiveLink(link.getAttribute("href")?.replace("#", "") || "home");
+          if (window.innerWidth < 768) {
+            closeMobileMenu();
+          }
+        });
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 768) {
+            closeMobileMenu();
+          }
+        });
+      });
+
+      const updateActiveSectionOnScroll = () => {
+        const navOffset = 140;
+        const scrollPosition = window.scrollY + navOffset;
+        let activeSectionId = sectionIds[0];
+
+        sections.forEach((section) => {
+          if (scrollPosition >= section.offsetTop) {
+            activeSectionId = section.id;
+          }
+        });
+
+        setActiveLink(activeSectionId);
+      };
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          closeMobileMenu();
+        }
+        updateActiveSectionOnScroll();
+      });
+
+      window.addEventListener("scroll", updateActiveSectionOnScroll, {
+        passive: true,
+      });
+
+      updateActiveSectionOnScroll();
+    </script>
+  </body>
+</html>

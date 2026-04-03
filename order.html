@@ -1,0 +1,151 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>La Casita Napoleon | Order Now</title>
+    <link href="logo-la-casita.png" rel="icon" type="image/png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;800&family=Manrope:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: "#131313",
+              surface: "#131313",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-lowest": "#0e0e0e",
+              "on-surface": "#e5e2e1",
+              "on-surface-variant": "#e1bfb5",
+              primary: "#ffb59c",
+              "primary-container": "#c1440e",
+              "on-primary-container": "#ffeee9",
+              secondary: "#f6be39",
+            },
+            fontFamily: {
+              headline: ["Noto Serif"],
+              body: ["Manrope"],
+              label: ["Manrope"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .brand-card {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      }
+    </style>
+  </head>
+  <body class="bg-background text-on-surface font-body">
+    <main class="min-h-screen">
+      <section class="px-8 py-10 bg-surface-container-lowest">
+        <div class="max-w-7xl mx-auto">
+          <a
+            class="inline-flex items-center gap-3 text-sm uppercase tracking-[0.3em] text-secondary"
+            href="code.html"
+            ><img
+              alt="La Casita logo"
+              class="h-10 w-10 rounded-full object-cover"
+              src="logo-la-casita.png"
+            />Back to Home</a
+          >
+          <h1 class="font-headline text-5xl md:text-7xl mt-4">Order Now</h1>
+          <p class="text-on-surface-variant text-lg mt-4 max-w-2xl">
+            Choose your preferred way to order. These links currently point to
+            the base URL until you share the final destination links.
+          </p>
+        </div>
+      </section>
+
+      <section class="px-8 py-20">
+        <div class="max-w-7xl mx-auto grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+          <a
+            class="brand-card w-full h-full rounded-xl p-8 bg-[#ffffff] text-[#ea1d2c] flex flex-col justify-between min-h-[260px]"
+            href="https://www.doordash.com/store/la-casita-napoleon-jackson-41072275/98061746/?srsltid=AfmBOoqqooBB_DtbJMR4VbChxFxskixxLZYyejY_31DdFm191NR5t_uw&utm_source=native_app_banner&web_consumer_id=dx_c5e612573cce4786a1abe2b994640355"
+          >
+            <div>
+              <p class="uppercase tracking-[0.3em] text-sm text-[#b81521]">
+                Delivery
+              </p>
+              <h2 class="font-headline text-4xl mt-4 text-[#ea1d2c]">
+                DoorDash
+              </h2>
+              <p class="mt-4 text-[#6a1a21]">
+                Tap through to place a delivery order with DoorDash.
+              </p>
+            </div>
+            <span
+              class="mt-8 inline-flex items-center justify-center rounded-md bg-[#ea1d2c] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-white"
+              >Open DoorDash</span
+            >
+          </a>
+
+          <a
+            class="brand-card w-full h-full rounded-xl p-8 bg-[#111111] text-white flex flex-col justify-between min-h-[260px] border border-white/20 shadow-[0_20px_40px_rgba(0,0,0,0.45),0_0_0_1px_rgba(255,255,255,0.08)]"
+            href="./"
+          >
+            <div>
+              <p class="uppercase tracking-[0.3em] text-sm text-white/70">
+                Delivery
+              </p>
+              <h2 class="font-headline text-4xl mt-4">Uber Eats</h2>
+              <p class="mt-4 text-white/75">
+                Head to Uber Eats for quick ordering and delivery updates.
+              </p>
+            </div>
+            <span
+              class="mt-8 inline-flex items-center justify-center rounded-md bg-[#06c167] px-5 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-black"
+              >Open Uber Eats</span
+            >
+          </a>
+
+          <a
+            class="brand-card w-full h-full rounded-xl p-8 bg-[#f15a22] text-white flex flex-col justify-between min-h-[260px]"
+            href="./"
+          >
+            <div>
+              <p class="uppercase tracking-[0.3em] text-sm text-white/80">
+                Delivery
+              </p>
+              <h2 class="font-headline text-4xl mt-4">Grubhub</h2>
+              <p class="mt-4 text-white/80">
+                Use Grubhub to browse and order from the current menu.
+              </p>
+            </div>
+            <span
+              class="mt-8 inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-[#f15a22]"
+              >Open Grubhub</span
+            >
+          </a>
+
+          <a
+            class="brand-card w-full h-full rounded-xl p-8 bg-surface-container-high text-on-surface flex flex-col justify-between min-h-[260px]"
+            href="tel:+15170000000"
+          >
+            <div>
+              <p class="uppercase tracking-[0.3em] text-sm text-secondary">
+                Reservations
+              </p>
+              <h2 class="font-headline text-4xl mt-4">Call Us</h2>
+              <p class="mt-4 text-on-surface-variant">
+                Prefer to reserve a table or place a pickup order by phone? Give
+                us a call.
+              </p>
+            </div>
+            <span
+              class="mt-8 inline-flex items-center justify-center rounded-md bg-primary-container px-5 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-on-primary-container"
+              >Call for Reservations</span
+            >
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
