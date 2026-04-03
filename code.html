@@ -87,6 +87,11 @@
       html {
         scroll-behavior: smooth;
       }
+      section[id],
+      footer[id],
+      div[id] {
+        scroll-margin-top: 120px;
+      }
       .material-symbols-outlined {
         font-variation-settings:
           "FILL" 0,
@@ -128,7 +133,9 @@
     class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container"
   >
     <nav class="fixed top-0 w-full z-50 bg-neutral-900/60 backdrop-blur-md">
-      <div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+      <div
+        class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto"
+      >
         <div class="font-serif text-2xl font-bold italic text-neutral-100">
           <a class="flex items-center gap-3" href="#home">
             <img
@@ -194,12 +201,41 @@
         id="mobile-menu"
       >
         <div class="flex flex-col gap-5">
-          <a class="nav-link nav-link-active font-serif tracking-tight text-lg w-fit" data-nav-link href="#home">Home</a>
-          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#story">Our Story</a>
-          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#menu">Menu Highlights</a>
-          <a class="nav-link font-serif tracking-tight text-lg w-fit" href="menu.html">Menu</a>
-          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#location">Location</a>
-          <a class="nav-link font-serif tracking-tight text-lg w-fit" data-nav-link href="#contact">Contact</a>
+          <a
+            class="nav-link nav-link-active font-serif tracking-tight text-lg w-fit"
+            data-nav-link
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg w-fit"
+            data-nav-link
+            href="#story"
+            >Our Story</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg w-fit"
+            data-nav-link
+            href="#menu"
+            >Menu Highlights</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg w-fit"
+            href="menu.html"
+            >Menu</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg w-fit"
+            data-nav-link
+            href="#location"
+            >Location</a
+          >
+          <a
+            class="nav-link font-serif tracking-tight text-lg w-fit"
+            data-nav-link
+            href="#contact"
+            >Contact</a
+          >
           <a
             class="inline-flex w-fit bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-label text-sm uppercase tracking-widest font-bold hover:brightness-110 transition-all"
             href="order.html"
@@ -291,7 +327,9 @@
     </section>
 
     <section class="py-14 md:py-16 px-8 bg-surface" id="story">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.95fr] gap-12 items-center">
+      <div
+        class="max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.95fr] gap-12 items-center"
+      >
         <div class="relative">
           <div class="w-14 h-1 bg-secondary mb-7"></div>
           <h2
@@ -317,10 +355,10 @@
               flavors could finally have a home of their own.
             </p>
           </div>
-          <div
-            class="mt-7 flex flex-col sm:flex-row sm:items-center gap-4"
-          >
-            <span class="text-secondary font-headline italic text-xl">The Gamez Family</span>
+          <div class="mt-7 flex flex-col sm:flex-row sm:items-center gap-4">
+            <span class="text-secondary font-headline italic text-xl"
+              >The Gamez Family</span
+            >
             <button
               class="inline-flex w-fit items-center justify-center rounded-md border border-white/10 px-5 py-3 font-label text-sm font-bold uppercase tracking-[0.2em] text-on-surface hover:border-primary hover:text-primary transition-all"
               id="open-story-modal"
@@ -364,13 +402,15 @@
         <h3 class="font-headline text-4xl md:text-5xl text-on-surface mb-6">
           From The Family Table To La Casita
         </h3>
-        <div class="space-y-5 text-on-surface-variant text-base md:text-lg leading-relaxed">
+        <div
+          class="space-y-5 text-on-surface-variant text-base md:text-lg leading-relaxed"
+        >
           <p>
             For more than two decades, Antolin Gamez built his life around the
             kitchen, learning what it takes to make honest food that people
             remember. Over those 23 years, the family recipes stayed close,
-            shaped by tradition, patience, and the kind of cooking that asks
-            you to slow down and do it right.
+            shaped by tradition, patience, and the kind of cooking that asks you
+            to slow down and do it right.
           </p>
           <p>
             La Casita was born from the idea that Napoleon deserved a place
@@ -424,9 +464,8 @@
             </h3>
             <p class="text-primary font-bold text-xl mb-4">$21.99</p>
             <p class="text-on-surface-variant leading-relaxed">
-              Marinated steak topped with grilled onions and served with
-              Mexican rice, guacamole, pico de gallo, and your choice of
-              tortillas.
+              Marinated steak topped with grilled onions and served with Mexican
+              rice, guacamole, pico de gallo, and your choice of tortillas.
             </p>
           </div>
           <div
@@ -519,7 +558,47 @@
       ></iframe>
     </section>
 
-    <footer class="bg-neutral-950 w-full py-16 px-8" id="contact">
+    <section class="bg-surface py-16 px-8" id="contact">
+      <div class="max-w-7xl mx-auto grid gap-8 md:grid-cols-3">
+        <div class="md:col-span-2">
+          <p class="text-secondary uppercase tracking-[0.3em] text-sm mb-3">
+            Contact
+          </p>
+          <h3 class="font-headline text-4xl text-on-surface mb-4">
+            Visit or Call La Casita
+          </h3>
+          <p class="text-on-surface-variant text-lg">
+            We are open daily from 11AM to 8PM at 6780 Brooklyn Road, Napoleon,
+            MI. Call ahead for large groups or takeout orders.
+          </p>
+        </div>
+        <div
+          class="bg-surface-container-high border border-outline-variant/40 rounded-xl p-6 space-y-4"
+        >
+          <p
+            class="font-label text-xs uppercase tracking-[0.2em] text-secondary"
+          >
+            Quick Info
+          </p>
+          <a
+            class="block text-on-surface hover:text-primary transition-colors"
+            href="tel:+15170000000"
+            >(517) 000-0000</a
+          >
+          <p class="text-on-surface-variant">
+            6780 Brooklyn Road, Napoleon, MI
+          </p>
+          <p class="text-on-surface-variant">Daily 11AM-8PM</p>
+          <a
+            class="inline-flex items-center justify-center bg-primary-container text-on-primary-container px-5 py-3 rounded-md font-label text-sm font-bold uppercase tracking-[0.2em] hover:brightness-110 transition-all"
+            href="order.html"
+            >Order Online</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-neutral-950 w-full py-16 px-8">
       <div
         class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start max-w-7xl mx-auto"
       >
@@ -531,8 +610,13 @@
               src="logo-la-casita.png"
             />
             <span class="flex flex-col">
-              <span class="font-headline text-2xl text-neutral-100 italic">La Casita Napoleon</span>
-              <span class="font-label text-xs uppercase tracking-[0.3em] text-neutral-500">Mexican Grill</span>
+              <span class="font-headline text-2xl text-neutral-100 italic"
+                >La Casita Napoleon</span
+              >
+              <span
+                class="font-label text-xs uppercase tracking-[0.3em] text-neutral-500"
+                >Mexican Grill</span
+              >
             </span>
           </a>
           <p
@@ -541,27 +625,30 @@
             Bringing authentic Mexican heritage to the heart of Michigan.
             Crafted with passion, served with pride.
           </p>
-          <p class="font-sans text-sm text-neutral-400 mt-6">
-            Call us for reservations and group dining arrangements.
-          </p>
         </div>
         <div class="space-y-4">
           <h4
             class="font-sans text-sm uppercase tracking-widest text-orange-600 mb-6"
           >
-            Information
+            Explore
           </h4>
           <div
             class="flex flex-col gap-3 font-sans text-sm uppercase tracking-widest text-neutral-500"
           >
-            <a class="hover:text-amber-400 transition-colors" href="#location"
-              >6780 Brooklyn Road, Napoleon, MI</a
+            <a class="hover:text-amber-400 transition-colors" href="#home"
+              >Home</a
             >
-            <span>Daily 11AM-8PM</span>
-            <a
-              class="hover:text-amber-400 transition-colors"
-              href="tel:+15170000000"
-              >Call Us</a
+            <a class="hover:text-amber-400 transition-colors" href="#menu"
+              >Menu Highlights</a
+            >
+            <a class="hover:text-amber-400 transition-colors" href="menu.html"
+              >Full Menu</a
+            >
+            <a class="hover:text-amber-400 transition-colors" href="#location"
+              >Location</a
+            >
+            <a class="hover:text-amber-400 transition-colors" href="#contact"
+              >Contact</a
             >
           </div>
         </div>
@@ -575,7 +662,9 @@
             class="flex flex-col gap-3 font-sans text-sm uppercase tracking-widest text-neutral-500"
           >
             <span>&copy; 2026 La Casita Napoleon</span>
-            <a class="hover:text-amber-400 transition-colors" href="privacy.html"
+            <a
+              class="hover:text-amber-400 transition-colors"
+              href="privacy.html"
               >Privacy Policy</a
             >
             <div class="flex gap-4 mt-4 text-sm uppercase tracking-[0.2em]">
@@ -603,7 +692,8 @@
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
       const openStoryModalButton = document.getElementById("open-story-modal");
-      const closeStoryModalButton = document.getElementById("close-story-modal");
+      const closeStoryModalButton =
+        document.getElementById("close-story-modal");
       const storyModal = document.getElementById("story-modal");
       const navLinks = Array.from(document.querySelectorAll("[data-nav-link]"));
       const mobileMenuLinks = Array.from(mobileMenu.querySelectorAll("a"));
@@ -656,7 +746,10 @@
       });
 
       document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !storyModal.classList.contains("hidden")) {
+        if (
+          event.key === "Escape" &&
+          !storyModal.classList.contains("hidden")
+        ) {
           closeStoryModal();
         }
       });
