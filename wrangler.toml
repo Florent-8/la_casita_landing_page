@@ -1,6 +1,5 @@
-name = "la-casita-landing-page"
+name = "lacasita"
 compatibility_date = "2026-04-04"
-pages_build_output_dir = "."
 
 [assets]
 directory = "."
